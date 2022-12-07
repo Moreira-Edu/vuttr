@@ -1,7 +1,8 @@
-import express from "express";
+import { Router } from "express";
+import { toolsRouter } from "./toolsRoutes";
 
-export const routes = express.Router();
+const routes = Router();
 
-routes.get("/tools", (req, res) => {
-  res.status(200).send({ msg: "ok" });
-});
+routes.use("/tools", toolsRouter);
+
+export { routes };
