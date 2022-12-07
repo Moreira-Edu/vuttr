@@ -1,6 +1,6 @@
-import { prisma } from "../../prisma/prisma";
-import { AppError } from "../errors/AppErrors";
-import { createToolsDTO } from "./dto/createToolsDTO";
+import { prisma } from "../../../../prisma/prisma";
+import { AppError } from "../../../errors/AppErrors";
+import { createToolsDTO } from "../../dto/createToolsDTO";
 
 export class CreateToolsUseCase {
   async execute({ title, link, description, tags }: createToolsDTO) {
